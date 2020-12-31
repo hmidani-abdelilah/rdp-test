@@ -4,6 +4,9 @@ sudo useradd abdo
 sudo usermod -aG sudo abdo
 sudo passwd abdo
 {
+sudo useradd -m abdo
+sudo adduser abdo sudo
+echo '1234' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
